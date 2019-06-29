@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{74531DA8-9487-4C92-B75F-400B56705A3D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Presentation</RootNamespace>
+    <AssemblyName>Magnetar Gym Management</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Nery\Desktop\Publish\Magnetar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>es-AR</TargetCulture>
+    <ProductName>Magnetar Gym Management</ProductName>
+    <PublisherName>Neither</PublisherName>
+    <ApplicationRevision>594</ApplicationRevision>
+    <ApplicationVersion>0.1.231.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Imagenes\favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>89279B1EF779EFD364108A2E68B933AA98827DF7</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Presentation_ClaveTemporal.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmAcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmAcercaDe.Designer.cs">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmAjustarSaldo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmAjustarSaldo.Designer.cs">
+      <DependentUpon>frmAjustarSaldo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmAsistencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmAsistencias.Designer.cs">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmBackup.Designer.cs">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmCalcIMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmCalcIMC.Designer.cs">
+      <DependentUpon>frmCalcIMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmCambiarPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmCambiarPwd.Designer.cs">
+      <DependentUpon>frmCambiarPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmCasilleros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmCasilleros.Designer.cs">
+      <DependentUpon>frmCasilleros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmCumples.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmCumples.Designer.cs">
+      <DependentUpon>frmCumples.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmEmail.Designer.cs">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmHistorialesSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmHistorialesSocio.Designer.cs">
+      <DependentUpon>frmHistorialesSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmImprimirRecibo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmImprimirRecibo.Designer.cs">
+      <DependentUpon>frmImprimirRecibo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmLocalidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmLocalidades.Designer.cs">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmMiGimnasio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmMiGimnasio.Designer.cs">
+      <DependentUpon>frmMiGimnasio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmProfesoresInactivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmProfesoresInactivos.Designer.cs">
+      <DependentUpon>frmProfesoresInactivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmPublicidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmPublicidad.Designer.cs">
+      <DependentUpon>frmPublicidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmAsignarCasillero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmAsignarCasillero.Designer.cs">
+      <DependentUpon>frmAsignarCasillero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarPagoCasillero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarPagoCasillero.Designer.cs">
+      <DependentUpon>frmRegistrarPagoCasillero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarPagoMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarPagoMembresia.Designer.cs">
+      <DependentUpon>frmRegistrarPagoMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarAsistencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarAsistencia.Designer.cs">
+      <DependentUpon>frmRegistrarAsistencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarLocalidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarLocalidad.Designer.cs">
+      <DependentUpon>frmRegistrarEditarLocalidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarMembresia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarMembresia.Designer.cs">
+      <DependentUpon>frmRegistrarEditarMembresia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarProfesor.Designer.cs">
+      <DependentUpon>frmRegistrarEditarProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarRutina.Designer.cs">
+      <DependentUpon>frmRegistrarEditarRutina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarServicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarServicio.Designer.cs">
+      <DependentUpon>frmRegistrarEditarServicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Winforms\frmRegistrarEditarActividad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarActividad.Designer.cs">
+      <DependentUpon>frmRegistrarEditarActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarUsuario.Designer.cs">
+      <DependentUpon>frmRegistrarEditarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmServicios.Designer.cs">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmSociosInactivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmSociosInactivos.Designer.cs">
+      <DependentUpon>frmSociosInactivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarSocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmRegistrarEditarSocio.Designer.cs">
+      <DependentUpon>frmRegistrarEditarSocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Winforms\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Winforms\rptRecibo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecibo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Winforms\rptAsistencias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAsistencias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Winforms\rptPagos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Winforms\rptMembresias.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMembresias.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmAcercaDe.resx">
+      <DependentUpon>frmAcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmAjustarSaldo.resx">
+      <DependentUpon>frmAjustarSaldo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmAsistencias.resx">
+      <DependentUpon>frmAsistencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmBackup.resx">
+      <DependentUpon>frmBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmCalcIMC.resx">
+      <DependentUpon>frmCalcIMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmCambiarPwd.resx">
+      <DependentUpon>frmCambiarPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmCasilleros.resx">
+      <DependentUpon>frmCasilleros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmCumples.resx">
+      <DependentUpon>frmCumples.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmEmail.resx">
+      <DependentUpon>frmEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmHistorialesSocio.resx">
+      <DependentUpon>frmHistorialesSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmImprimirRecibo.resx">
+      <DependentUpon>frmImprimirRecibo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmLocalidades.resx">
+      <DependentUpon>frmLocalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmMiGimnasio.resx">
+      <DependentUpon>frmMiGimnasio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmProfesoresInactivos.resx">
+      <DependentUpon>frmProfesoresInactivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmPublicidad.resx">
+      <DependentUpon>frmPublicidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmAsignarCasillero.resx">
+      <DependentUpon>frmAsignarCasillero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarPagoCasillero.resx">
+      <DependentUpon>frmRegistrarPagoCasillero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarPagoMembresia.resx">
+      <DependentUpon>frmRegistrarPagoMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarAsistencia.resx">
+      <DependentUpon>frmRegistrarAsistencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarActividad.resx">
+      <DependentUpon>frmRegistrarEditarActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarLocalidad.resx">
+      <DependentUpon>frmRegistrarEditarLocalidad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarMembresia.resx">
+      <DependentUpon>frmRegistrarEditarMembresia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarProfesor.resx">
+      <DependentUpon>frmRegistrarEditarProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarRutina.resx">
+      <DependentUpon>frmRegistrarEditarRutina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarServicio.resx">
+      <DependentUpon>frmRegistrarEditarServicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarUsuario.resx">
+      <DependentUpon>frmRegistrarEditarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmServicios.resx">
+      <DependentUpon>frmServicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmSociosInactivos.resx">
+      <DependentUpon>frmSociosInactivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmRegistrarEditarSocio.resx">
+      <DependentUpon>frmRegistrarEditarSocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\rptRecibo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecibo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\rptAsistencias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAsistencias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\rptPagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPagos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Winforms\rptMembresias.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMembresias.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logic\Logic.csproj">
+      <Project>{9172f3bf-4b66-44bb-be94-5be636ce908d}</Project>
+      <Name>Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.Express.11.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\add.png" />
+    <Content Include="Imagenes\adjuntar.png" />
+    <Content Include="Imagenes\advertising.png" />
+    <Content Include="Imagenes\ajuste.png" />
+    <Content Include="Imagenes\bike.png" />
+    <Content Include="Imagenes\brush.png" />
+    <Content Include="Imagenes\calendar.png" />
+    <Content Include="Imagenes\cancel.png" />
+    <Content Include="Imagenes\casilleroin.png" />
+    <Content Include="Imagenes\casilleroout.png" />
+    <Content Include="Imagenes\close.png" />
+    <Content Include="Imagenes\close76.png" />
+    <Content Include="Imagenes\ClubGymLogoSlogan.png" />
+    <Content Include="Imagenes\config.png" />
+    <Content Include="Imagenes\delete.png" />
+    <Content Include="Imagenes\email.png" />
+    <Content Include="Imagenes\facebook.png" />
+    <Content Include="Imagenes\favicon.ico" />
+    <Content Include="Imagenes\folder.png" />
+    <Content Include="Imagenes\font.png" />
+    <Content Include="Imagenes\graph.png" />
+    <Content Include="Imagenes\group.add.png" />
+    <Content Include="Imagenes\gymdefault1.png" />
+    <Content Include="Imagenes\help.png" />
+    <Content Include="Imagenes\home.png" />
+    <Content Include="Imagenes\home32.png" />
+    <Content Include="Imagenes\imc.png" />
+    <Content Include="Imagenes\import.png" />
+    <Content Include="Imagenes\instalador.jpg" />
+    <Content Include="Imagenes\instaladorbanner.jpg" />
+    <Content Include="Imagenes\key.png" />
+    <Content Include="Imagenes\light.png" />
+    <Content Include="Imagenes\list.add.png" />
+    <Content Include="Imagenes\list.png" />
+    <Content Include="Imagenes\lock.png" />
+    <Content Include="Imagenes\money.png" />
+    <Content Include="Imagenes\next.png" />
+    <Content Include="Imagenes\page.add.png" />
+    <Content Include="Imagenes\page.delete.png" />
+    <Content Include="Imagenes\password.png" />
+    <Content Include="Imagenes\people.png" />
+    <Content Include="Imagenes\previous.png" />
+    <Content Include="Imagenes\print.png" />
+    <Content Include="Imagenes\redo.png" />
+    <Content Include="Imagenes\refresh.png" />
+    <Content Include="Imagenes\resize.png" />
+    <Content Include="Imagenes\save.png" />
+    <Content Include="Imagenes\search.png" />
+    <Content Include="Imagenes\search48.png" />
+    <Content Include="Imagenes\sociodefault.png" />
+    <Content Include="Imagenes\turnos.png" />
+    <Content Include="Imagenes\underconstruction.png" />
+    <Content Include="Imagenes\upload.png" />
+    <Content Include="Imagenes\user.add.png" />
+    <None Include="Imagenes\magnetarlogo.png" />
+    <Content Include="Imagenes\magnetar-logo-small2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
